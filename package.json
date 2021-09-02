@@ -1,0 +1,62 @@
+{
+  "name": "edge-monit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "This process monitors Edge servers",
+  "homepage": "https://github.com/EdgeApp/edge-monit#readme",
+  "bugs": {
+    "url": "https://github.com/EdgeApp/edge-monit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdgeApp/edge-monit.git"
+  },
+  "license": "NONE",
+  "author": "Samuel Holmes",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "sucrase -q -t typescript,imports -d ./lib ./src",
+    "clean": "rimraf lib",
+    "cli": "node -r sucrase/register src/bin/cli.ts",
+    "configure": "configure",
+    "fix": "eslint . --fix",
+    "lint": "eslint .",
+    "precommit": "lint-staged && npm-run-all types prepare",
+    "prepare": "husky install && npm-run-all clean configure build",
+    "start": "node -r sucrase/register src/index.ts",
+    "start.dev": "nodemon | pino-pretty",
+    "types": "tsc"
+  },
+  "lint-staged": {
+    "*.{js,ts}": "eslint"
+  },
+  "dependencies": {
+    "cleaner-config": "^0.1.7",
+    "cleaners": "^0.3.9",
+    "cross-fetch": "^3.1.4",
+    "edge-server-tools": "^0.2.3",
+    "pino": "^6.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.7.10",
+    "@types/pino": "^6.3.11",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard-kit": "^0.15.1",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "nodemon": "^2.0.12",
+    "npm-run-all": "^4.1.5",
+    "pino-pretty": "^6.0.0",
+    "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
+    "sucrase": "^3.20.1",
+    "typescript": "^4.4.2"
+  }
+}
