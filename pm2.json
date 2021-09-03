@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "name": "monit",
+      "script": "./lib/index.js",
+      "error_file": "../log/monit/error.log",
+      "out_file": "../log/monit/out.log"
+    }
+  ]
+}
