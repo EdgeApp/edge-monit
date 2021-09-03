@@ -1,15 +1,15 @@
 {
-  "name": "edge-monit",
+  "name": "edge-monitor",
   "version": "0.1.0",
   "private": true,
   "description": "This process monitors Edge servers",
-  "homepage": "https://github.com/EdgeApp/edge-monit#readme",
+  "homepage": "https://github.com/EdgeApp/edge-monitor#readme",
   "bugs": {
-    "url": "https://github.com/EdgeApp/edge-monit/issues"
+    "url": "https://github.com/EdgeApp/edge-monitor/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EdgeApp/edge-monit.git"
+    "url": "git+https://github.com/EdgeApp/edge-monitor.git"
   },
   "license": "NONE",
   "author": "Samuel Holmes",
